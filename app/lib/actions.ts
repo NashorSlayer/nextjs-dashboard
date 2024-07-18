@@ -48,7 +48,6 @@ export async function createInvoice(prevState: State, formData: FormData) {
     }
     const { customerId, amount, status } = validatedFields.data
     const amounInCents = amount * 100
-    console.log(new Date().toISOString())
     const date = new Date().toISOString().split('T')[0]
     try {
         await sql`
